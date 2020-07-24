@@ -2,7 +2,7 @@ name: "Build"
 on:
   push:
 jobs:
-  build-and-cache:
+  nixos-20-03:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.3.1

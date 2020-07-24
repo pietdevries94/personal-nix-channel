@@ -8,3 +8,6 @@ The following blog post is used as a short guide for making a custom channel. ht
 
 The following packages are available:
 - Up to date VSCode / VSCodium
+
+## Cache
+This channel is being cached for NixOS 20.03 on the url `https://pietdevries94.cachix.org` with public key `pietdevries94.cachix.org-1:EmL0bay0YH7tI9SU3sLeyhBR5QYx+Zg6vMvBOmZ6MMQ=`
