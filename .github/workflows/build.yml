@@ -2,7 +2,7 @@ name: "Build"
 on:
   push:
 jobs:
-  tests:
+  build-and-cache:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.3.1
@@ -11,5 +11,5 @@ jobs:
       with:
         name: pietdevries94
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+    - run: mkdir -p ~/.config/nixpkgs && echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
     - run: nix-build
-    - run: nix-shell --run "echo OK"
