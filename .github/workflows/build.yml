@@ -2,7 +2,7 @@ name: "Build"
 on:
   push:
 jobs:
-  tests:
+  build-and-cache:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.3.1
