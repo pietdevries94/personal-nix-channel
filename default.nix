@@ -8,4 +8,5 @@ in rec {
   vscodium = pkgs.callPackage ./pkgs/applications/vscode/vscodium.nix {
     inherit pkgs;
   };
+  scientifica = pkgs.callPackage ./pkgs/data/fonts/scientifica { };
 }
