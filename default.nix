@@ -3,12 +3,10 @@ let
   pkgs = import <nixpkgs> { inherit system; };
   self = in self
 in rec {
-  vscode = pkgs.callPackage ./pkgs/dev/rust-1.33 {
+  vscode = pkgs.callPackage ./pkgs/applications/vscode/vscode {
     inherit pkgs;
   };
-
-  nodejs_9_10_0 = pkgs.callPackage ./pkgs/dev/node9.nix {
+  vscodium = pkgs.callPackage ./pkgs/applications/vscode/vscodium {
     inherit pkgs;
   };
-  ...
 }
