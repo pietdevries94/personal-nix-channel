@@ -1,7 +1,5 @@
-{ system ? builtins.currentSystem }:
-let
-  pkgs = import <nixpkgs> { inherit system; };
-in rec {
+{ system ? builtins.currentSystem, pkgs }:
+rec {
   vscode = pkgs.callPackage ./pkgs/applications/vscode/vscode.nix {
     inherit pkgs;
   };
