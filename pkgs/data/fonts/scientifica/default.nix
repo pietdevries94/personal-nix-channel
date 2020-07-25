@@ -1,21 +1,28 @@
-{ lib, fetchzip }:
+{ stdenv, fetchzip, mkfontdir }:
 
-let
+stdenv.mkDerivation rec {
+  name = "scientifica-${version}";
   version = "v2.1";
 
-in fetchzip rec {
-  name = "scientifica-${version}";
+  src = fetchzip {
+    url = "https://github.com/NerdyPepper/scientifica/releases/download/${version}/${name}.tar";
+    sha256 = "1mji70h5qdplx0rlhijrdpbmvd0c6fvnr70sla032gfs5g6f78cn";
+  };
 
-  url = "https://github.com/NerdyPepper/scientifica/releases/download/${version}/${name}.tar";
+  nativeBuildInputs = [ mkfontdir ];
 
-  sha256 = "0jp3icsg13fxjgi3fxmvr9mzjrdyysmmdayz3ii5ims8i2493qcq";
-
-  postFetch = ''
-    mkdir -p $out/share/fonts/truetype
-    tar -xf $downloadedFile -C $out/share/fonts/truetype --strip-components=2  scientifica/ttf 
+  installPhase = ''
+    install -m 644 -D bdf/* -t "$out/share/fonts/misc"
+    install -m 644 -D ttf/* -t "$ttf/share/fonts/misc"
+    install -m 644 -D otb/* -t "$otb/share/fonts/misc"
+    mkfontdir "$out/share/fonts/misc"
+    mkfontdir "$ttf/share/fonts/misc"
+    mkfontdir "$otb/share/fonts/misc"
   '';
 
-  meta = with lib; {
+  outputs = [ "out" "ttf" "otb" ];
+
+  meta = with stdenv.lib; {
     description = "Tall and condensed bitmap font for geeks";
     longDescription = ''
       Tall and condensed bitmap font for geeks.
