@@ -9,4 +9,5 @@ in rec {
     inherit pkgs;
   };
   scientifica = pkgs.callPackage ./pkgs/data/fonts/scientifica { };
+  curie = pkgs.callPackage ./pkgs/data/fonts/curie { };
 }
