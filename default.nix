@@ -1,6 +1,9 @@
 with builtins;
 
-{ 
+let
+  homeDir = getEnv "HOME";
+in
+{
   config ? let
     configFile = getEnv "NIXPKGS_CONFIG";
     configFile2 = homeDir + "/.config/nixpkgs/config.nix";
