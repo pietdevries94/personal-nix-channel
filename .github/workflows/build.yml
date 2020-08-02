@@ -14,4 +14,4 @@ jobs:
         name: pietdevries94
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
     - run: mkdir -p ~/.config/nixpkgs && echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
-    - run: nix-shell cache-shell.nix --command exit
+    - run: nix-build
