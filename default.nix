@@ -1,4 +1,15 @@
-{ config ? {} }:
+{ 
+  config ? let
+    configFile = getEnv "NIXPKGS_CONFIG";
+    configFile2 = homeDir + "/.config/nixpkgs/config.nix";
+    configFile3 = homeDir + "/.nixpkgs/config.nix"; # obsolete
+  in
+    if configFile != "" && pathExists configFile then import configFile
+    else if homeDir != "" && pathExists configFile2 then import configFile2
+    else if homeDir != "" && pathExists configFile3 then import configFile3
+    else {}
+}:
+
 let
   pkgs = import <nixpkgs> { inherit config; };
 in rec {
