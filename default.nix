@@ -1,3 +1,5 @@
+with builtins;
+
 { 
   config ? let
     configFile = getEnv "NIXPKGS_CONFIG";
