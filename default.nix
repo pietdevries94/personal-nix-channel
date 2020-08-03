@@ -24,6 +24,7 @@ in rec {
   vscodium = pkgs.callPackage ./pkgs/applications/vscode/vscodium.nix {
     inherit pkgs;
   };
-  scientifica = pkgs.callPackage ./pkgs/data/fonts/scientifica { };
-  curie = pkgs.callPackage ./pkgs/data/fonts/curie { };
+  scientifica = pkgs.callPackage ./pkgs/data/fonts/scientifica {};
+  curie = pkgs.callPackage ./pkgs/data/fonts/curie {};
+  nix-boilerplate = pkgs.callPackage ./pkgs/development/nix-boilerplate {};
 }
