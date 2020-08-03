@@ -1,0 +1,17 @@
+name: "Auto-update"
+on:
+  repository_dispatch:
+  schedule:
+    - cron:  '0 * * * *'
+jobs:
+  check-and-push-updates:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.3.1
+    - uses: cachix/install-nix-action@v10
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+    - run: ./update-all.sh
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply automatic updates
