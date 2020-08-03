@@ -4,6 +4,7 @@ in
   pkgs.fetchFromGitHub {
     owner = "pietdevries94";
     repo = "nix-boilerplate";
-    rev = "6cb81a6411531ee4cf620cf5efd4325b800b3098";
-    sha256 = "0f6qz40jr9im2c76zplrwwh2cr8a1285ig4397cxhl0w1bzc6jzr";
+    rev = "d83baa177024efab32b7af78502e34b80563f3e0";
+    sha256 = "1njl7py6vqnabn8av1kmp4381r5nx5s1s1mhz5fix1d76yy3c09g";
+    fetchSubmodules = false;
   }
