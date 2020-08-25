@@ -11,8 +11,8 @@ let
   archive_fmt = if system == "x86_64-darwin" then "zip" else "tar.gz";
 
   sha256 = {
-    x86_64-linux = "";
-    x86_64-darwin = "";
+    x86_64-linux = "0f8p25963i7bbm2zxb4ra935maxk3sxims6j873wqwqnzn701diq";
+    x86_64-darwin = "0k8ylcbiqvb0cnvbz3059rbyjqxmvig8zf7bfqgln1w591i411c4";
   }.${system};
 
   sourceRoot = {
