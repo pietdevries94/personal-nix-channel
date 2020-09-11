@@ -12,7 +12,7 @@ let
 
   sha256 = {
     x86_64-linux = "0s8jsmg9l9zdjkmrxl317g25fjnmpgys0ri9y2i1mq6y3s26ypw5";
-    x86_64-darwin = "1argdrsyrrqpb689nl0f23i7zs4nmckpcp82vn8hk0s1nra06q86";
+    x86_64-darwin = "";
   }.${system};
 
   sourceRoot = {
