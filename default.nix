@@ -29,6 +29,9 @@ in rec {
   };
   scientifica = callPackage ./pkgs/data/fonts/scientifica {};
   curie = callPackage ./pkgs/data/fonts/curie {};
+  tela-icon-theme = callPackage ./pkgs/data/icons/tela-icon-theme {
+    inherit pkgs;
+  };
 
   #devtools
   nix-boilerplate = callPackage ./pkgs/development/nix-boilerplate {};
