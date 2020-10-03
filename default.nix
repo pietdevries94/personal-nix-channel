@@ -27,6 +27,11 @@ in rec {
   vscodium = callPackage ./pkgs/applications/vscode/vscodium.nix {
     inherit pkgs;
   };
+  cordium = callPackage ./pkgs/applications/cordium {
+    inherit pkgs;
+  };
+
+  # fonts and themes
   scientifica = callPackage ./pkgs/data/fonts/scientifica {};
   curie = callPackage ./pkgs/data/fonts/curie {};
   tela-icon-theme = callPackage ./pkgs/data/icons/tela-icon-theme {
