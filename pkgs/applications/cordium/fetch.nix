@@ -4,7 +4,7 @@ in
   pkgs.fetchFromGitHub {
     owner = "pietdevries94";
     repo = "Cordium";
-    rev = "100c5cb0c1d57df02523622b7833c08b22d511f2";
-    sha256 = "1x24xlda7bpqg3bbyphd58szbw04hxbhihnwf2kw3hglp8f724c5";
+    rev = "bebc48f4e559822255f203d618c03a114f21b802";
+    sha256 = "04rwa00yj1f2g90wa8dk4jc54q3mkn302i9jlx56d6anibidkd9p";
     fetchSubmodules = true;
   }

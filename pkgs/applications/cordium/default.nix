@@ -27,7 +27,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     pkg-config
   ];
 
-  cargoSha256 = "08dcyq5v703ynd2inb09fnh0i6rdq0a16jqpmc2adj0im5sjmw6a";
+  cargoSha256 = "1rp7pf03570zvj89b1sdp634zf4wha8gkhg6fy5zcs46g33imqgw";
   verifyCargoDeps = true;
 
   postInstall = ''
