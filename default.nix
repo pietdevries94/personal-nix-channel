@@ -33,6 +33,10 @@ in rec {
   cordium = callPackage ./pkgs/applications/cordium {
     inherit pkgs;
   };
+  
+  wtfutil-bin = callPackage ./pkgs/applications/wtfutil-bin {
+    inherit pkgs;
+  };
 
   # fonts and themes
   scientifica = callPackage ./pkgs/data/fonts/scientifica {};
