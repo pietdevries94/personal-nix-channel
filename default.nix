@@ -21,9 +21,10 @@ let
   inherit (pkgs) callPackage;
 in rec {
   # applications
-  vscode = callPackage ./pkgs/applications/vscode/vscode.nix {
-    inherit pkgs;
-  };
+  # Temporary disabling this package for the 20.09 upgrade
+  # vscode = callPackage ./pkgs/applications/vscode/vscode.nix {
+  #   inherit pkgs;
+  # };
 
   # The update script for vscodium breaks often and I don't use it, so I have disabled it for now
   # vscodium = callPackage ./pkgs/applications/vscode/vscodium.nix {
