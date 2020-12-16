@@ -12,7 +12,7 @@ let
 
   sha256 = {
     x86_64-linux = "";
-    x86_64-darwin = "0gdzv1z7z6ilbfrrym7lmwkjc7gyrfhrj7x1g1ark4wqrh55p6hf";
+    x86_64-darwin = "1qgadm52c5lzkvgvqrz0n8brm4qbjg8hf1dk6a2ynqhqjxcwbj4r";
   }.${system};
 in
   callPackage ./generic.nix rec {
@@ -21,7 +21,7 @@ in
 
     # Please backport all compatible updates to the stable release.
     # This is important for the extension ecosystem.
-    version = "1.52.0";
+    version = "1.52.1";
     pname = "vscode";
 
     executableName = "code" + lib.optionalString isInsiders "-insiders";
