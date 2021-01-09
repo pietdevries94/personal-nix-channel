@@ -30,10 +30,11 @@ in rec {
   # vscodium = callPackage ./pkgs/applications/vscode/vscodium.nix {
   #   inherit pkgs;
   # };
-  
-  cordium = callPackage ./pkgs/applications/cordium {
-    inherit pkgs;
-  };
+
+  # TODO: fix for 20.09  
+  # cordium = callPackage ./pkgs/applications/cordium {
+  #   inherit pkgs;
+  # };
   
   wtfutil-bin = callPackage ./pkgs/applications/wtfutil-bin {
     inherit pkgs;
