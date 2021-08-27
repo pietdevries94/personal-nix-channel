@@ -21,7 +21,7 @@ in
 
     # Please backport all compatible updates to the stable release.
     # This is important for the extension ecosystem.
-    version = "1.59.1";
+    version = "";
     pname = "vscode";
 
     executableName = "code" + lib.optionalString isInsiders "-insiders";
