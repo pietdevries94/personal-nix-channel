@@ -4,7 +4,7 @@ in
   pkgs.fetchFromGitHub {
     owner = "vinceliuice";
     repo = "Tela-icon-theme";
-    rev = "bc8e7ffeeba6373d42b827ab2d44b86e1f119c7e";
-    sha256 = "4h6c7asjUC7pqi4GkxCN13LOpVVbjBdvjUMN7sXAlNE=";
+    rev = "184959a91ed9726d7cbb3d55c627be09d302096f";
+    sha256 = "mvkgHBdZm6vF+/DS3CRLl1m14U0Lj4Xtz4J/vpJUTQM=";
     fetchSubmodules = true;
   }
