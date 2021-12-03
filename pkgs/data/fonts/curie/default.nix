@@ -1,4 +1,4 @@
-{ stdenv, fetchzip, mkfontdir }:
+{ stdenv, lib, fetchzip, mkfontdir }:
 
 stdenv.mkDerivation rec {
   name = "curie-${version}";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     mkfontdir "$out/share/fonts/misc"
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A slightly upscaled version of scientifica";
     homepage = https://github.com/NerdyPepper/curie;
     license = licenses.ofl;
