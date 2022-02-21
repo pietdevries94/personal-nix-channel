@@ -4,6 +4,6 @@ in
   pkgs.fetchFromGitHub {
     owner = "vinceliuice";
     repo = "Tela-icon-theme";
-    rev = "c52016cd2be237bc6e94092b55e82ec3abdcd336";
-    sha256 = "XKNSCWwanm2dP002TY/mE4SDX13TllHrbrb55V4wLSQ=";
+    rev = "79a367f7982bc10d7aacb51b7ae63bd20d8f5bec";
+    sha256 = "tnhu//q0Vl7MiMeHopB1Gwokkw/P+nDOo4HKizjxC0Y=";
   }
