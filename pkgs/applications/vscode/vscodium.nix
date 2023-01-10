@@ -27,7 +27,7 @@ in
 
     # Please backport all compatible updates to the stable release.
     # This is important for the extension ecosystem.
-    version = "1.74.2.23007";
+    version = "1.74.3.23010";
     pname = "vscodium";
 
     executableName = "codium";
